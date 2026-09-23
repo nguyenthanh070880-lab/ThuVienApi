@@ -5,36 +5,61 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Products": {
+    "/api/Books/get-all-books": {
       "get": {
         "tags": [
-          "Products"
+          "Books"
         ],
         "responses": {
           "200": {
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/api/Books/get-book-by-id/{id}": {
+      "get": {
+        "tags": [
+          "Books"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Books/add-book": {
       "post": {
         "tags": [
-          "Products"
+          "Books"
         ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/AddBookRequestDTO"
               }
             },
             "text/json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/AddBookRequestDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/AddBookRequestDTO"
               }
             }
           }
@@ -46,31 +71,10 @@
         }
       }
     },
-    "/api/Products/{id}": {
-      "get": {
-        "tags": [
-          "Products"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
+    "/api/Books/update-book-by-id/{id}": {
       "put": {
         "tags": [
-          "Products"
+          "Books"
         ],
         "parameters": [
           {
@@ -87,17 +91,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/AddBookRequestDTO"
               }
             },
             "text/json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/AddBookRequestDTO"
               }
             },
             "application/*+json": {
               "schema": {
-                "type": "string"
+                "$ref": "#/components/schemas/AddBookRequestDTO"
               }
             }
           }
@@ -107,10 +111,12 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/api/Books/delete-book-by-id/{id}": {
       "delete": {
         "tags": [
-          "Products"
+          "Books"
         ],
         "parameters": [
           {
@@ -172,6 +178,57 @@
   },
   "components": {
     "schemas": {
+      "AddBookRequestDTO": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "isRead": {
+            "type": "boolean"
+          },
+          "dateRead": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "rate": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "genre": {
+            "type": "string",
+            "nullable": true
+          },
+          "coverUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateAdded": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "publisherID": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "authorIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "WeatherForecast": {
         "type": "object",
         "properties": {
@@ -199,7 +256,7 @@
   },
   "tags": [
     {
-      "name": "Products"
+      "name": "Books"
     },
     {
       "name": "WeatherForecast"
