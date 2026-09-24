@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using WebApi.Repositories;
 using WebAPI_simple.Data;
 using WebAPI_simple.Repositories;
 
@@ -16,7 +17,8 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddScoped<IBookRepository, SQLBookRepository>();
-
+builder.Services.AddScoped<IAuthorRepository, SQLAuthorRepository>();
+builder.Services.AddScoped<IPublisherRepository, SQLPublisherRepository>();
 var app = builder.Build();
 
 // 4. Cấu hình HTTP request pipeline cho Swagger
