@@ -79,7 +79,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WebAPI_simple.Controllers.BooksController",
+    "ContainingType": "WebApi.Controllers.BooksController",
     "Method": "AddBook",
     "RelativePath": "api/Books/add-book",
     "HttpMethod": "POST",
@@ -88,14 +88,14 @@
     "Parameters": [
       {
         "Name": "addBookRequestDTO",
-        "Type": "WebAPI_simple.Models.DTO.AddBookRequestDTO",
+        "Type": "WebApi.Models.DTO.AddBookRequestDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WebAPI_simple.Controllers.BooksController",
+    "ContainingType": "WebApi.Controllers.BooksController",
     "Method": "DeleteBookById",
     "RelativePath": "api/Books/delete-book-by-id/{id}",
     "HttpMethod": "DELETE",
@@ -111,7 +111,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WebAPI_simple.Controllers.BooksController",
+    "ContainingType": "WebApi.Controllers.BooksController",
     "Method": "GetAll",
     "RelativePath": "api/Books/get-all-books",
     "HttpMethod": "GET",
@@ -121,7 +121,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WebAPI_simple.Controllers.BooksController",
+    "ContainingType": "WebApi.Controllers.BooksController",
     "Method": "GetBookById",
     "RelativePath": "api/Books/get-book-by-id/{id}",
     "HttpMethod": "GET",
@@ -137,7 +137,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WebAPI_simple.Controllers.BooksController",
+    "ContainingType": "WebApi.Controllers.BooksController",
     "Method": "UpdateBookById",
     "RelativePath": "api/Books/update-book-by-id/{id}",
     "HttpMethod": "PUT",
@@ -151,7 +151,7 @@
       },
       {
         "Name": "bookDTO",
-        "Type": "WebAPI_simple.Models.DTO.AddBookRequestDTO",
+        "Type": "WebApi.Models.DTO.AddBookRequestDTO",
         "IsRequired": true
       }
     ],
@@ -175,7 +175,7 @@
   },
   {
     "ContainingType": "WebApi.Controllers.PublishersController",
-    "Method": "DeletePublisherById",
+    "Method": "DeletePublisher",
     "RelativePath": "api/Publishers/delete-publisher-by-id/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,

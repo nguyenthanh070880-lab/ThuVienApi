@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebApi.CustomActionFilters;
 using WebApi.Models.DTO;
 using WebApi.Repositories;
 using WebAPI_simple.Data;
@@ -31,11 +32,11 @@ namespace WebApi.Controllers
             return Ok(authorWithId);
         }
         [HttpPost("add-author")]
-        public IActionResult AddAuthors([FromBody] AddAuthorRequestDTO
-       addAuthorRequestDTO)
+        [ValidateModel]
+        public IActionResult AddAuthors([FromBody] AddAuthorRequestDTO addAuthorRequestDTO)
         {
             var authorAdd = _authorRepository.AddAuthor(addAuthorRequestDTO);
-            return Ok();
+            return Ok(authorAdd);
         }
         [HttpPut("update-author-by-id/{id}")]
         public IActionResult UpdateBookById(int id, [FromBody] AuthorNoIdDTO authorDTO)
@@ -44,10 +45,21 @@ namespace WebApi.Controllers
             return Ok(authorUpdate);
         }
         [HttpDelete("delete-author-by-id/{id}")]
-        public IActionResult DeleteBookById(int id)
+        public IActionResult DeleteAuthor(int id)
         {
-            var authorDelete = _authorRepository.DeleteAuthorById(id);
-            return Ok();
+            var author = _dbContext.Authors.FirstOrDefault(a => a.Id == id);
+            if (author == null)
+            {
+                return NotFound($"Không tìm thấy Tác giả với ID = {id}");
+            }
+            var hasBooks = _dbContext.Books_Authors.Any(ba => ba.AuthorId == id);
+            if (hasBooks)
+            {
+                return BadRequest("Hãy gỡ liên kết trong Book_Author trước khi xóa.");
+            }
+            _dbContext.Authors.Remove(author);
+            _dbContext.SaveChanges();
+            return Ok($"Đã xóa Tác giả ID = {id} thành công.");
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebApi.CustomActionFilters;
 using WebApi.Models.DTO;
 using WebApi.Repositories;
 using WebAPI_simple.Data;
@@ -33,12 +34,20 @@ namespace WebApi.Controllers
         }
 
         [HttpPost("add-publisher")]
+        [ValidateModel]
         public IActionResult AddPublisher([FromBody] AddPublisherRequestDTO addPublisherRequestDTO)
         {
+            var isDuplicate = _dbContext.Publishers.Any(p => p.Name.ToLower() == addPublisherRequestDTO.Name.ToLower());
+
+            if (isDuplicate)
+            {
+                ModelState.AddModelError("Name", "Tên nhà xuất bản đã trùng lặp!");
+                return BadRequest(ModelState);
+            }
+
             var publisherAdd = _publisherRepository.AddPublisher(addPublisherRequestDTO);
             return Ok(publisherAdd);
         }
-
         [HttpPut("update-publisher-by-id/{id}")]
         public IActionResult UpdatePublisherById(int id, [FromBody] PublisherNoIdDTO publisherDTO)
         {
@@ -47,10 +56,21 @@ namespace WebApi.Controllers
         }
 
         [HttpDelete("delete-publisher-by-id/{id}")]
-        public IActionResult DeletePublisherById(int id)
+        public IActionResult DeletePublisher(int id)
         {
-            var publisherDelete = _publisherRepository.DeletePublisherById(id);
-            return Ok(publisherDelete);
+            var publisher = _dbContext.Publishers.FirstOrDefault(p => p.Id == id);
+            if (publisher == null)
+            {
+                return NotFound($"Không tìm thấy Nhà xuất bản với ID = {id}");
+            }
+            var hasBooks = _dbContext.Books.Any(b => b.PublisherID == id);
+            if (hasBooks)
+            {
+                return BadRequest($"Không thể xóa Nhà xuất bản này vì vẫn còn các cuốn sách đang tham chiếu tới!");
+            }
+            _dbContext.Publishers.Remove(publisher);
+            _dbContext.SaveChanges();
+            return Ok($"Đã xóa Nhà xuất bản ID = {id} thành công.");
         }
     }
 }
