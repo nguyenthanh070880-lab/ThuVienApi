@@ -17,7 +17,7 @@
   },
   {
     "ContainingType": "WebApi.Controllers.AuthorsController",
-    "Method": "DeleteBookById",
+    "Method": "DeleteAuthor",
     "RelativePath": "api/Authors/delete-author-by-id/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
@@ -117,7 +117,38 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "filterOn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "filterQuery",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sortBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "isAscending",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
