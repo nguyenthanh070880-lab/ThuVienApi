@@ -168,3 +168,15 @@ C:\Users\Public\Web Api thầy tấn\WebApi\WebApi\bin\Debug\net10.0\runtimes\wi
 C:\Users\Public\Web Api thầy tấn\WebApi\WebApi\bin\Debug\net10.0\runtimes\win-x64\native\msalruntime.dll
 C:\Users\Public\Web Api thầy tấn\WebApi\WebApi\bin\Debug\net10.0\runtimes\win-x86\native\msalruntime_x86.dll
 C:\Users\Public\Web Api thầy tấn\WebApi\WebApi\obj\Debug\net10.0\WebApi.sourcelink.json
+C:\Users\Public\Web Api thầy tấn\WebApi\WebApi\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Public\Web Api thầy tấn\WebApi\WebApi\bin\Debug\net10.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Public\Web Api thầy tấn\WebApi\WebApi\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
+C:\Users\Public\Web Api thầy tấn\WebApi\WebApi\bin\Debug\net10.0\Serilog.dll
+C:\Users\Public\Web Api thầy tấn\WebApi\WebApi\bin\Debug\net10.0\Serilog.AspNetCore.dll
+C:\Users\Public\Web Api thầy tấn\WebApi\WebApi\bin\Debug\net10.0\Serilog.Extensions.Hosting.dll
+C:\Users\Public\Web Api thầy tấn\WebApi\WebApi\bin\Debug\net10.0\Serilog.Extensions.Logging.dll
+C:\Users\Public\Web Api thầy tấn\WebApi\WebApi\bin\Debug\net10.0\Serilog.Formatting.Compact.dll
+C:\Users\Public\Web Api thầy tấn\WebApi\WebApi\bin\Debug\net10.0\Serilog.Settings.Configuration.dll
+C:\Users\Public\Web Api thầy tấn\WebApi\WebApi\bin\Debug\net10.0\Serilog.Sinks.Console.dll
+C:\Users\Public\Web Api thầy tấn\WebApi\WebApi\bin\Debug\net10.0\Serilog.Sinks.Debug.dll
+C:\Users\Public\Web Api thầy tấn\WebApi\WebApi\bin\Debug\net10.0\Serilog.Sinks.File.dll
