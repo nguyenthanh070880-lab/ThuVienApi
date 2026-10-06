@@ -34,7 +34,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<IBookRepository, SQLBookRepository>();
 builder.Services.AddScoped<IAuthorRepository, SQLAuthorRepository>();
 builder.Services.AddScoped<IPublisherRepository, SQLPublisherRepository>();
-
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<IImageRepository, LocalImageRepository>();
 // BookAuthDbContext
 builder.Services.AddDbContext<BookAuthDbContext>(options =>
     options.UseSqlServer(
@@ -79,6 +80,7 @@ builder.Services.Configure<IdentityOptions>(options =>
 
 // Token Repository
 builder.Services.AddScoped<ITokenRepository, TokenRepository>();
+
 // Swagger + JWT
 builder.Services.AddSwaggerGen(options =>
 {
