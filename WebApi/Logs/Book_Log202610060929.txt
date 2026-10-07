@@ -1,0 +1,41 @@
+2026-10-06 09:29:47.702 +07:00 [INF] User profile is available. Using 'C:\Users\admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 09:29:47.884 +07:00 [INF] Now listening on: https://localhost:7298
+2026-10-06 09:29:47.885 +07:00 [INF] Now listening on: http://localhost:5259
+2026-10-06 09:29:47.927 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 09:29:47.928 +07:00 [INF] Hosting environment: Development
+2026-10-06 09:29:47.928 +07:00 [INF] Content root path: C:\Users\Public\Web Api thầy tấn\WebApi\WebApi
+2026-10-06 09:29:53.025 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Books/add-book - application/json 252
+2026-10-06 09:29:53.121 +07:00 [INF] Executing endpoint 'WebApi.Controllers.BooksController.AddBook (WebApi)'
+2026-10-06 09:29:53.141 +07:00 [INF] Route matched with {action = "AddBook", controller = "Books"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddBook(WebApi.Models.DTO.AddBookRequestDTO) on controller WebApi.Controllers.BooksController (WebApi).
+2026-10-06 09:29:54.784 +07:00 [INF] Executed DbCommand (53ms) [Parameters=[@addBookRequestDTO_PublisherID='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Publishers] AS [p]
+        WHERE [p].[Id] = @addBookRequestDTO_PublisherID) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-10-06 09:29:54.827 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@authorId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Authors] AS [a]
+        WHERE [a].[Id] = @authorId) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-10-06 09:29:55.126 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (DbType = Boolean), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Books] ([CoverUrl], [DateAdded], [DateRead], [Description], [Genre], [IsRead], [PublisherID], [Rate], [Title])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2026-10-06 09:29:55.188 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Books_Authors] ([AuthorId], [BookId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2026-10-06 09:29:55.204 +07:00 [INF] Executing OkObjectResult, writing value of type 'WebApi.Models.DTO.AddBookRequestDTO'.
+2026-10-06 09:29:55.221 +07:00 [INF] Executed action WebApi.Controllers.BooksController.AddBook (WebApi) in 2073.6626ms
+2026-10-06 09:29:55.223 +07:00 [INF] Executed endpoint 'WebApi.Controllers.BooksController.AddBook (WebApi)'
+2026-10-06 09:29:55.239 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Books/add-book - 200 null application/json; charset=utf-8 2219.4214ms

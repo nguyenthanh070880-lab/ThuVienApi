@@ -1,0 +1,27 @@
+2026-10-05 08:07:12.828 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/User/Login - application/json 63
+2026-10-05 08:07:12.837 +07:00 [INF] Executing endpoint 'WebAPI_simple.Controllers.UserController.Login (WebApi)'
+2026-10-05 08:07:12.848 +07:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(WebAPI_simple.Models.DTO.LoginRequestDTO) on controller WebAPI_simple.Controllers.UserController (WebApi).
+2026-10-05 08:07:12.993 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-10-05 08:07:12.997 +07:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2026-10-05 08:07:12.999 +07:00 [INF] Executed action WebAPI_simple.Controllers.UserController.Login (WebApi) in 149.4024ms
+2026-10-05 08:07:13.000 +07:00 [INF] Executed endpoint 'WebAPI_simple.Controllers.UserController.Login (WebApi)'
+2026-10-05 08:07:13.001 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/User/Login - 400 null text/plain; charset=utf-8 172.9017ms
+2026-10-05 08:07:41.788 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/User/Login - application/json 59
+2026-10-05 08:07:41.797 +07:00 [INF] Executing endpoint 'WebAPI_simple.Controllers.UserController.Login (WebApi)'
+2026-10-05 08:07:41.798 +07:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(WebAPI_simple.Models.DTO.LoginRequestDTO) on controller WebAPI_simple.Controllers.UserController (WebApi).
+2026-10-05 08:07:41.891 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-10-05 08:07:42.085 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[@userId='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @userId
+2026-10-05 08:07:42.128 +07:00 [INF] Executing OkObjectResult, writing value of type 'WebAPI_simple.Models.DTO.LoginResponseDTO'.
+2026-10-05 08:07:42.132 +07:00 [INF] Executed action WebAPI_simple.Controllers.UserController.Login (WebApi) in 331.6833ms
+2026-10-05 08:07:42.133 +07:00 [INF] Executed endpoint 'WebAPI_simple.Controllers.UserController.Login (WebApi)'
+2026-10-05 08:07:42.133 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/User/Login - 200 null application/json; charset=utf-8 345.6391ms

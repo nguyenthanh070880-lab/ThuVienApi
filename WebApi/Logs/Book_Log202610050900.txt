@@ -1,0 +1,50 @@
+2026-10-05 09:00:35.823 +07:00 [INF] User profile is available. Using 'C:\Users\admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-05 09:00:36.014 +07:00 [INF] Now listening on: https://localhost:7298
+2026-10-05 09:00:36.016 +07:00 [INF] Now listening on: http://localhost:5259
+2026-10-05 09:00:36.052 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-05 09:00:36.053 +07:00 [INF] Hosting environment: Development
+2026-10-05 09:00:36.054 +07:00 [INF] Content root path: C:\Users\Public\Web Api thầy tấn\WebApi\WebApi
+2026-10-05 09:00:47.575 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7298/ - null null
+2026-10-05 09:00:47.744 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7298/ - 404 null null 176.7966ms
+2026-10-05 09:00:47.752 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7298/, Response status code: 404
+2026-10-05 09:00:51.536 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - null null
+2026-10-05 09:00:51.609 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - 304 null null 73.1397ms
+2026-10-05 09:00:51.623 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/swagger-ui.css - null null
+2026-10-05 09:00:51.624 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/swagger-ui-bundle.js - null null
+2026-10-05 09:00:51.624 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-05 09:00:51.624 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-05 09:00:51.624 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.css - null null
+2026-10-05 09:00:51.625 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.js - null null
+2026-10-05 09:00:51.638 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.js - 304 null null 13.0589ms
+2026-10-05 09:00:51.645 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - 200 14917 application/javascript; charset=utf-8 21.6804ms
+2026-10-05 09:00:51.646 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.css - 304 null null 22.9122ms
+2026-10-05 09:00:51.646 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/swagger-ui-standalone-preset.js - 304 null null 22.51ms
+2026-10-05 09:00:51.646 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/swagger-ui.css - 304 null null 23.5969ms
+2026-10-05 09:00:51.647 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/swagger-ui-bundle.js - 304 null null 22.6642ms
+2026-10-05 09:00:51.661 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - null null
+2026-10-05 09:00:51.700 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.367ms
+2026-10-05 09:00:51.761 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - null null
+2026-10-05 09:00:51.776 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/favicon-32x32.png - null null
+2026-10-05 09:00:51.778 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/favicon-32x32.png - 304 null null 2.3999ms
+2026-10-05 09:00:51.809 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 48.4512ms
+2026-10-05 09:00:55.922 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7298/ - null null
+2026-10-05 09:00:55.929 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7298/ - 404 null null 6.4955ms
+2026-10-05 09:00:55.932 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7298/, Response status code: 404
+2026-10-05 09:00:59.299 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.html - null null
+2026-10-05 09:00:59.307 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.html - 304 null null 7.7908ms
+2026-10-05 09:00:59.317 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/swagger-ui.css - null null
+2026-10-05 09:00:59.317 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.css - null null
+2026-10-05 09:00:59.317 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/swagger-ui-bundle.js - null null
+2026-10-05 09:00:59.319 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/swagger-ui.css - 304 null null 2.4201ms
+2026-10-05 09:00:59.321 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.css - 304 null null 4.2808ms
+2026-10-05 09:00:59.323 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/swagger-ui-bundle.js - 304 null null 6.1582ms
+2026-10-05 09:00:59.358 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/swagger-ui-standalone-preset.js - null null
+2026-10-05 09:00:59.361 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/index.js - null null
+2026-10-05 09:00:59.361 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/swagger-ui-standalone-preset.js - 304 null null 3.0874ms
+2026-10-05 09:00:59.364 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/index.js - 304 null null 2.7804ms
+2026-10-05 09:00:59.366 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - null null
+2026-10-05 09:00:59.370 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_framework/aspnetcore-browser-refresh.js - 200 14917 application/javascript; charset=utf-8 4.3375ms
+2026-10-05 09:00:59.373 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7298/_vs/browserLink - null null
+2026-10-05 09:00:59.388 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7298/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.909ms
+2026-10-05 09:00:59.473 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - null null
+2026-10-05 09:00:59.486 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7298/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.6768ms

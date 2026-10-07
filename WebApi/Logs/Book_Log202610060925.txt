@@ -1,0 +1,41 @@
+2026-10-06 09:25:26.010 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Publishers/add-publisher - application/json 30
+2026-10-06 09:25:26.019 +07:00 [INF] Executing endpoint 'WebApi.Controllers.PublishersController.AddPublisher (WebApi)'
+2026-10-06 09:25:26.042 +07:00 [INF] Route matched with {action = "AddPublisher", controller = "Publishers"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddPublisher(WebApi.Models.DTO.AddPublisherRequestDTO) on controller WebApi.Controllers.PublishersController (WebApi).
+2026-10-06 09:25:27.607 +07:00 [INF] Executed DbCommand (49ms) [Parameters=[@ToLower='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Publishers] AS [p]
+        WHERE LOWER([p].[Name]) = @ToLower) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-10-06 09:25:27.843 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Publishers] ([Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2026-10-06 09:25:27.872 +07:00 [INF] Executing OkObjectResult, writing value of type 'WebApi.Models.DTO.AddPublisherRequestDTO'.
+2026-10-06 09:25:27.880 +07:00 [INF] Executed action WebApi.Controllers.PublishersController.AddPublisher (WebApi) in 1831.7094ms
+2026-10-06 09:25:27.881 +07:00 [INF] Executed endpoint 'WebApi.Controllers.PublishersController.AddPublisher (WebApi)'
+2026-10-06 09:25:27.890 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Publishers/add-publisher - 200 null application/json; charset=utf-8 1879.4571ms
+2026-10-06 09:25:34.377 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/Publishers/get-all-publisher - null null
+2026-10-06 09:25:34.386 +07:00 [INF] Executing endpoint 'WebApi.Controllers.PublishersController.GetAllPublisher (WebApi)'
+2026-10-06 09:25:34.388 +07:00 [INF] Route matched with {action = "GetAllPublisher", controller = "Publishers"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPublisher() on controller WebApi.Controllers.PublishersController (WebApi).
+2026-10-06 09:25:34.474 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name]
+FROM [Publishers] AS [p]
+2026-10-06 09:25:34.486 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebApi.Models.DTO.PublisherDTO, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 09:25:34.490 +07:00 [INF] Executed action WebApi.Controllers.PublishersController.GetAllPublisher (WebApi) in 100.2267ms
+2026-10-06 09:25:34.491 +07:00 [INF] Executed endpoint 'WebApi.Controllers.PublishersController.GetAllPublisher (WebApi)'
+2026-10-06 09:25:34.492 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/Publishers/get-all-publisher - 200 null application/json; charset=utf-8 114.4664ms
+2026-10-06 09:25:47.435 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/Authors/get-all-author - null null
+2026-10-06 09:25:47.437 +07:00 [INF] Executing endpoint 'WebApi.Controllers.AuthorsController.GetAllAuthor (WebApi)'
+2026-10-06 09:25:47.439 +07:00 [INF] Route matched with {action = "GetAllAuthor", controller = "Authors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllAuthor() on controller WebApi.Controllers.AuthorsController (WebApi).
+2026-10-06 09:25:47.578 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[FullName]
+FROM [Authors] AS [a]
+2026-10-06 09:25:47.590 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebApi.Models.DTO.AuthorDTO, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 09:25:47.592 +07:00 [INF] Executed action WebApi.Controllers.AuthorsController.GetAllAuthor (WebApi) in 151.6475ms
+2026-10-06 09:25:47.593 +07:00 [INF] Executed endpoint 'WebApi.Controllers.AuthorsController.GetAllAuthor (WebApi)'
+2026-10-06 09:25:47.594 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/Authors/get-all-author - 200 null application/json; charset=utf-8 159.2206ms

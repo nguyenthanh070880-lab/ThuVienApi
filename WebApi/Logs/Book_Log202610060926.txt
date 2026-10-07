@@ -1,0 +1,46 @@
+2026-10-06 09:26:02.251 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Authors/add-author - application/json 32
+2026-10-06 09:26:02.259 +07:00 [INF] Executing endpoint 'WebApi.Controllers.AuthorsController.AddAuthors (WebApi)'
+2026-10-06 09:26:02.263 +07:00 [INF] Route matched with {action = "AddAuthors", controller = "Authors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddAuthors(WebApi.Models.DTO.AddAuthorRequestDTO) on controller WebApi.Controllers.AuthorsController (WebApi).
+2026-10-06 09:26:02.318 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Authors] ([FullName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2026-10-06 09:26:02.323 +07:00 [INF] Executing OkObjectResult, writing value of type 'WebApi.Models.DTO.AddAuthorRequestDTO'.
+2026-10-06 09:26:02.324 +07:00 [INF] Executed action WebApi.Controllers.AuthorsController.AddAuthors (WebApi) in 59.2328ms
+2026-10-06 09:26:02.325 +07:00 [INF] Executed endpoint 'WebApi.Controllers.AuthorsController.AddAuthors (WebApi)'
+2026-10-06 09:26:02.326 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Authors/add-author - 200 null application/json; charset=utf-8 74.8072ms
+2026-10-06 09:26:12.909 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Authors/add-author - application/json 24
+2026-10-06 09:26:12.912 +07:00 [INF] Executing endpoint 'WebApi.Controllers.AuthorsController.AddAuthors (WebApi)'
+2026-10-06 09:26:12.913 +07:00 [INF] Route matched with {action = "AddAuthors", controller = "Authors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult AddAuthors(WebApi.Models.DTO.AddAuthorRequestDTO) on controller WebApi.Controllers.AuthorsController (WebApi).
+2026-10-06 09:26:12.958 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Authors] ([FullName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0);
+2026-10-06 09:26:12.961 +07:00 [INF] Executing OkObjectResult, writing value of type 'WebApi.Models.DTO.AddAuthorRequestDTO'.
+2026-10-06 09:26:12.962 +07:00 [INF] Executed action WebApi.Controllers.AuthorsController.AddAuthors (WebApi) in 48.5788ms
+2026-10-06 09:26:12.963 +07:00 [INF] Executed endpoint 'WebApi.Controllers.AuthorsController.AddAuthors (WebApi)'
+2026-10-06 09:26:12.964 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Authors/add-author - 200 null application/json; charset=utf-8 54.8372ms
+2026-10-06 09:26:22.006 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/Authors/get-all-author - null null
+2026-10-06 09:26:22.008 +07:00 [INF] Executing endpoint 'WebApi.Controllers.AuthorsController.GetAllAuthor (WebApi)'
+2026-10-06 09:26:22.009 +07:00 [INF] Route matched with {action = "GetAllAuthor", controller = "Authors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllAuthor() on controller WebApi.Controllers.AuthorsController (WebApi).
+2026-10-06 09:26:22.048 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[FullName]
+FROM [Authors] AS [a]
+2026-10-06 09:26:22.050 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebApi.Models.DTO.AuthorDTO, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 09:26:22.050 +07:00 [INF] Executed action WebApi.Controllers.AuthorsController.GetAllAuthor (WebApi) in 40.5431ms
+2026-10-06 09:26:22.051 +07:00 [INF] Executed endpoint 'WebApi.Controllers.AuthorsController.GetAllAuthor (WebApi)'
+2026-10-06 09:26:22.052 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/Authors/get-all-author - 200 null application/json; charset=utf-8 45.761ms
+2026-10-06 09:26:29.673 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Books/add-book - application/json 257
+2026-10-06 09:26:29.685 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Write)
+2026-10-06 09:26:29.692 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-06 09:26:29.693 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Books/add-book - 401 0 null 20.1545ms
+2026-10-06 09:26:58.956 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Books/add-book - application/json 252
+2026-10-06 09:26:58.960 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Write)
+2026-10-06 09:26:58.962 +07:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-10-06 09:26:58.963 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Books/add-book - 401 0 null 7.2679ms

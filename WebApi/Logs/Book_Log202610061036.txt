@@ -1,0 +1,9 @@
+2026-10-06 10:36:08.088 +07:00 [INF] User profile is available. Using 'C:\Users\admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 10:36:08.307 +07:00 [INF] Now listening on: https://localhost:7298
+2026-10-06 10:36:08.309 +07:00 [INF] Now listening on: http://localhost:5259
+2026-10-06 10:36:08.346 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 10:36:08.346 +07:00 [INF] Hosting environment: Development
+2026-10-06 10:36:08.347 +07:00 [INF] Content root path: C:\Users\Public\Web Api thầy tấn\WebApi\WebApi
+2026-10-06 10:36:11.084 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7298/ - null null
+2026-10-06 10:36:11.269 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7298/ - 404 null null 192.1603ms
+2026-10-06 10:36:11.277 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7298/, Response status code: 404

@@ -1,0 +1,24 @@
+2026-10-06 08:49:18.681 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Images/Upload - multipart/form-data; boundary=----WebKitFormBoundaryGvvV7i6AuhEkuFPJ 360560
+2026-10-06 08:49:18.689 +07:00 [INF] Executing endpoint 'WebApi.Controllers.ImagesController.Upload (WebApi)'
+2026-10-06 08:49:18.715 +07:00 [INF] Route matched with {action = "Upload", controller = "Images"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Upload(WebApi.Models.DTO.ImageUploadRequestDTO) on controller WebApi.Controllers.ImagesController (WebApi).
+2026-10-06 08:49:20.371 +07:00 [INF] Executed DbCommand (60ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Images] ([FileDescription], [FileExtension], [FileName], [FilePath], [FileSizeInBytes])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2026-10-06 08:49:20.420 +07:00 [INF] Executing OkObjectResult, writing value of type 'Image'.
+2026-10-06 08:49:20.436 +07:00 [INF] Executed action WebApi.Controllers.ImagesController.Upload (WebApi) in 1715.0931ms
+2026-10-06 08:49:20.437 +07:00 [INF] Executed endpoint 'WebApi.Controllers.ImagesController.Upload (WebApi)'
+2026-10-06 08:49:20.448 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Images/Upload - 200 null application/json; charset=utf-8 1767.6224ms
+2026-10-06 08:49:47.275 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/Images/Download?id=1 - null null
+2026-10-06 08:49:47.283 +07:00 [INF] Executing endpoint 'WebApi.Controllers.ImagesController.DownloadImage (WebApi)'
+2026-10-06 08:49:47.288 +07:00 [INF] Route matched with {action = "DownloadImage", controller = "Images"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DownloadImage(Int32) on controller WebApi.Controllers.ImagesController (WebApi).
+2026-10-06 08:49:47.741 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[@Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [i].[Id], [i].[FileDescription], [i].[FileExtension], [i].[FileName], [i].[FilePath], [i].[FileSizeInBytes]
+FROM [Images] AS [i]
+WHERE [i].[Id] = @Id
+2026-10-06 08:49:47.753 +07:00 [INF] Executing FileContentResult, sending file with download name 'string.png' ...
+2026-10-06 08:49:47.769 +07:00 [INF] Executed action WebApi.Controllers.ImagesController.DownloadImage (WebApi) in 479.1364ms
+2026-10-06 08:49:47.770 +07:00 [INF] Executed endpoint 'WebApi.Controllers.ImagesController.DownloadImage (WebApi)'
+2026-10-06 08:49:47.771 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/Images/Download?id=1 - 200 360133 application/octet-stream 496.3379ms

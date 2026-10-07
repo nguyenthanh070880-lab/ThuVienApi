@@ -1,0 +1,5 @@
+2026-10-05 08:14:44.774 +07:00 [INF] Request starting HTTP/2 POST https://localhost:7298/api/Books/add-book - application/json 255
+2026-10-05 08:14:44.781 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Write)
+2026-10-05 08:14:44.784 +07:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-10-05 08:14:44.785 +07:00 [INF] Request finished HTTP/2 POST https://localhost:7298/api/Books/add-book - 403 0 null 11.3716ms

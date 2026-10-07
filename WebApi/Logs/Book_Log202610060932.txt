@@ -1,0 +1,10 @@
+2026-10-06 09:32:18.016 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7298/api/Authors/get-all-author - null null
+2026-10-06 09:32:18.023 +07:00 [INF] Executing endpoint 'WebApi.Controllers.AuthorsController.GetAllAuthor (WebApi)'
+2026-10-06 09:32:18.026 +07:00 [INF] Route matched with {action = "GetAllAuthor", controller = "Authors"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllAuthor() on controller WebApi.Controllers.AuthorsController (WebApi).
+2026-10-06 09:32:18.207 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[FullName]
+FROM [Authors] AS [a]
+2026-10-06 09:32:18.220 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebApi.Models.DTO.AuthorDTO, WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-10-06 09:32:18.222 +07:00 [INF] Executed action WebApi.Controllers.AuthorsController.GetAllAuthor (WebApi) in 194.5792ms
+2026-10-06 09:32:18.224 +07:00 [INF] Executed endpoint 'WebApi.Controllers.AuthorsController.GetAllAuthor (WebApi)'
+2026-10-06 09:32:18.224 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7298/api/Authors/get-all-author - 200 null application/json; charset=utf-8 208.2525ms

@@ -1,0 +1,6 @@
+2026-10-06 09:35:02.486 +07:00 [INF] User profile is available. Using 'C:\Users\admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-10-06 09:35:02.666 +07:00 [INF] Now listening on: https://localhost:7298
+2026-10-06 09:35:02.667 +07:00 [INF] Now listening on: http://localhost:5259
+2026-10-06 09:35:02.704 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 09:35:02.705 +07:00 [INF] Hosting environment: Development
+2026-10-06 09:35:02.705 +07:00 [INF] Content root path: C:\Users\Public\Web Api thầy tấn\WebApi\WebApi

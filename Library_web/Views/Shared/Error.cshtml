@@ -1,0 +1,25 @@
+﻿@model Library_web.Models.ErrorViewModel
+@{
+    ViewData["Title"] = "Lỗi hệ thống";
+}
+
+<div class="container mt-4">
+    <h1 class="text-danger">Đã xảy ra lỗi!</h1>
+    <h3 class="text-secondary">Thông tin chi tiết lỗi bên dưới:</h3>
+
+    <div class="card border-danger my-3">
+        <div class="card-body text-danger">
+            <strong>Nội dung lỗi:</strong>
+            <p class="card-text mt-2">@(Model?.ErrorMessage ?? "Không xác định được nguyên nhân cụ thể.")</p>
+        </div>
+    </div>
+
+    @if (Model?.ShowRequestId == true)
+    {
+        <p>
+            <strong>Request ID:</strong> <code>@Model.RequestId</code>
+        </p>
+    }
+
+    <a href="/" class="btn btn-primary">Quay lại trang chủ</a>
+</div>
